@@ -1,0 +1,24 @@
+{
+	"name": "wildbunny-framework/cli",
+	"description": "Liefert Klassen zur Verwendung auf der Kommandozeile.",
+	"homepage": "https://www.wildbunny.de",
+	"readme": "README.md",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Timon Kreis",
+			"email": "info@wildbunny.de",
+			"homepage": "https://www.wildbunny.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^7.1",
+		"ext-readline": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"WildBunny\\Framework\\CLI\\": "/"
+		}
+	}
+}
