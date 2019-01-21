@@ -30,7 +30,7 @@ class CLI
 	public const TEXT_PURPLE = 1024;
 	public const TEXT_LIGHT_PURPLE = 2048;
 	public const TEXT_CYAN = 4096;
-	public const TEXT_LIGHT_CYAN = 81924;
+	public const TEXT_LIGHT_CYAN = 8192;
 	public const TEXT_LIGHT_GRAY = 16384;
 	public const TEXT_WHITE = 32768;
 
