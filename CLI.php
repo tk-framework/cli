@@ -113,7 +113,7 @@ class CLI
 			if ($color) {
 				foreach ($textColors as $index => $textColor) {
 					if ($color & $index) {
-						echo "\033[" . $textColor . 'm';
+						echo "\e[" . $textColor . 'm';
 
 						break;
 					}
@@ -121,14 +121,14 @@ class CLI
 
 				foreach ($bgColors as $index => $bgColor) {
 					if ($color & $index) {
-						echo "\033[" . $bgColor . 'm';
+						echo "\e[" . $bgColor . 'm';
 
 						break;
 					}
 				}
 			}
 			else {
-				echo "\033[0m";
+				echo "\e[0m";
 			}
 		}
 
