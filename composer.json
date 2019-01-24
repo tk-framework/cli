@@ -18,7 +18,10 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"WildBunny\\Framework\\CLI\\": "/"
+			"WildBunny\\Framework\\CLI\\": ""
 		}
-	}
+	},
+	"keywords": [
+		"cli"
+	]
 }
