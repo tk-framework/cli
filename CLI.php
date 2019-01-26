@@ -7,8 +7,6 @@ declare(strict_types = 1);
 
 namespace WildBunny\Framework\CLI;
 
-use WildBunny\Framework;
-
 /**
  * @author Timon Kreis <info@wildbunny.de>
  * @category WildBunny.Framework
