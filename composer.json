@@ -2,7 +2,6 @@
 	"name": "wildbunny-framework/cli",
 	"description": "Liefert Klassen zur Verwendung auf der Kommandozeile.",
 	"homepage": "https://www.wildbunny.de",
-	"readme": "README.md",
 	"license": "proprietary",
 	"authors": [
 		{
@@ -18,7 +17,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"WildBunny\\Framework\\CLI\\": ""
+			"WildBunny\\Framework\\CLI\\": "src"
 		}
 	},
 	"keywords": [
