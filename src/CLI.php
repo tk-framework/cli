@@ -166,6 +166,24 @@ class CLI
 	}
 
 	/**
+	 * Send an output to STDERR
+	 *
+	 * @param string $message
+	 * @param bool $newLine
+	 * @return $this
+	 */
+	public function error(string $message = '', bool $newLine = true) : CLI
+	{
+		fwrite(STDERR, $message);
+
+		if ($newLine) {
+			fwrite(STDERR, PHP_EOL);
+		}
+
+		return $this;
+	}
+
+	/**
 	 * Promt input from user
 	 *
 	 * @param string|null $message
