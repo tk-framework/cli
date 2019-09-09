@@ -61,9 +61,10 @@ class CLI
 	 * Set the color
 	 *
 	 * @param int|null $color
+	 * @param bool|resource $stream
 	 * @return $this
 	 */
-	public function setColor(int $color = null) : CLI
+	public function setColor(int $color = null, $stream = STDOUT) : CLI
 	{
 		if ($this->color !== $color) {
 			$this->color = $color;
@@ -101,7 +102,7 @@ class CLI
 			if ($color) {
 				foreach ($textColors as $index => $textColor) {
 					if ($color & $index) {
-						echo "\e[" . $textColor . 'm';
+						fwrite($stream, "\e[" . $textColor . 'm');
 
 						break;
 					}
@@ -109,14 +110,14 @@ class CLI
 
 				foreach ($bgColors as $index => $bgColor) {
 					if ($color & $index) {
-						echo "\e[" . $bgColor . 'm';
+						fwrite($stream, "\e[" . $bgColor . 'm');
 
 						break;
 					}
 				}
 			}
 			else {
-				echo "\e[0m";
+				fwrite($stream, "\e[0m");
 			}
 		}
 
@@ -130,13 +131,13 @@ class CLI
 	 */
 	public function clear() : CLI
 	{
-		echo str_repeat(PHP_EOL, 100);
+		fwrite(STDOUT, str_repeat(PHP_EOL, 100));
 
 		return $this;
 	}
 
 	/**
-	 * Send an output
+	 * Send an output to STDOUT
 	 *
 	 * @param string $message
 	 * @param bool $newLine
@@ -151,14 +152,14 @@ class CLI
 			$this->setColor($color);
 		}
 
-		echo $message;
+		fwrite(STDOUT, $message);
 
 		if ($color) {
 			$this->setColor($prevColor);
 		}
 
 		if ($newLine) {
-			echo PHP_EOL;
+			fwrite(STDOUT, PHP_EOL);
 		}
 
 		return $this;
