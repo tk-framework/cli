@@ -48,16 +48,6 @@ class CLI
 	protected $color = null;
 
 	/**
-	 * @throws \Exception
-	 */
-	public function __construct()
-	{
-		if (PHP_SAPI != 'cli') {
-			throw new \Exception('PHP not running in CLI mode');
-		}
-	}
-
-	/**
 	 * Get the current color
 	 *
 	 * @return int|null
