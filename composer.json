@@ -1,6 +1,6 @@
 {
 	"name": "wildbunny-framework/cli",
-	"description": "Liefert Klassen zur Verwendung auf der Kommandozeile.",
+	"description": "Add classes for use in CLI.",
 	"homepage": "https://www.wildbunny.de",
 	"license": "proprietary",
 	"authors": [
@@ -21,6 +21,7 @@
 		}
 	},
 	"keywords": [
-		"cli"
+		"cli",
+		"command line"
 	]
 }

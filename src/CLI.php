@@ -14,7 +14,7 @@ namespace WildBunny\Framework\CLI;
  */
 class CLI
 {
-	// Vordergrundfarben
+	// Foreground colors
 	public const TEXT_BLACK = 1;
 	public const TEXT_DARK_GRAY = 2;
 	public const TEXT_RED = 4;
@@ -32,7 +32,7 @@ class CLI
 	public const TEXT_LIGHT_GRAY = 16384;
 	public const TEXT_WHITE = 32768;
 
-	// Hintergrundfarben
+	// Background colors
 	public const BG_BLACK = 65536;
 	public const BG_RED = 131072;
 	public const BG_GREEN = 262144;
@@ -58,7 +58,7 @@ class CLI
 	}
 
 	/**
-	 * Liefert die aktuelle Farbe
+	 * Get the current color
 	 *
 	 * @return int|null
 	 */
@@ -68,7 +68,7 @@ class CLI
 	}
 
 	/**
-	 * Setzt die Farbe
+	 * Set the color
 	 *
 	 * @param int|null $color
 	 * @return $this
@@ -79,33 +79,33 @@ class CLI
 			$this->color = $color;
 
 			$textColors = [
-				1 => '0;30', // Schwarz
-				2 => '1;30', // Dunkelgrau
-				4 => '0;31', // Rot
-				8 => '1;31', // Hellrot
-				16 => '0;32', // Grün
-				32 => '1;32', // Hellgrün
-				64 => '0;33', // Braun
-				128 => '1;33', // Gelb
-				256 => '0;34', // Blau
-				512 => '1;34', // Hellblau
-				1024 => '0;35', // Violett
-				2048 => '1;35', // Hellviolett
-				4096 => '0;36', // Türkis
-				8192 => '1;36', // Helltürkis
-				16384 => '0;37', // Hellgrau
-				32768 => '1;37' // Weiß
+				1 => '0;30', // Black
+				2 => '1;30', // Dark gray
+				4 => '0;31', // Red
+				8 => '1;31', // Light red
+				16 => '0;32', // Green
+				32 => '1;32', // Light green
+				64 => '0;33', // Brown
+				128 => '1;33', // Yellow
+				256 => '0;34', // Blue
+				512 => '1;34', // Light blue
+				1024 => '0;35', // Purple
+				2048 => '1;35', // Light purple
+				4096 => '0;36', // Cyan
+				8192 => '1;36', // Light cyan
+				16384 => '0;37', // Light gray
+				32768 => '1;37' // White
 			];
 
 			$bgColors = [
-				65536 => 40, // Schwarz
-				131072 => 41, // Rot
-				262144 => 42, // Grün
-				524288 => 43, // Gelb
-				1048576 => 44, // Blau
-				2097152 => 45, // Pink
-				4194304 => 46, // Türkis
-				8388608 => 47 // Hellgrau
+				65536 => 40, // Black
+				131072 => 41, // Red
+				262144 => 42, // Green
+				524288 => 43, // Yellow
+				1048576 => 44, // Blue
+				2097152 => 45, // Magenta
+				4194304 => 46, // Cyan
+				8388608 => 47 // Light gray
 			];
 
 			if ($color) {
@@ -134,7 +134,7 @@ class CLI
 	}
 
 	/**
-	 * Setzt die Ausgabe zurück
+	 * Clear the output
 	 *
 	 * @return $this
 	 */
@@ -146,7 +146,7 @@ class CLI
 	}
 
 	/**
-	 * Liefert eine Ausgabe
+	 * Send an output
 	 *
 	 * @param string $message
 	 * @param bool $newLine
@@ -175,7 +175,7 @@ class CLI
 	}
 
 	/**
-	 * Wartet auf eine Eingabe des Benutzers
+	 * Promt input from user
 	 *
 	 * @param string|null $message
 	 * @param bool $newLine
@@ -203,7 +203,7 @@ class CLI
 	}
 
 	/**
-	 * Pausiert das Skript bis zum Drücken der Enter-Taste
+	 * Pause the script until enter is pressed
 	 *
 	 * @param string|null $message
 	 * @param bool $newLine
