@@ -1,13 +1,13 @@
 {
-	"name": "wildbunny-framework/cli",
+	"name": "netzhase-framework/cli",
 	"description": "Add classes for use in CLI.",
-	"homepage": "https://www.wildbunny.de",
+	"homepage": "https://www.netzhase.de",
 	"license": "proprietary",
 	"authors": [
 		{
 			"name": "Timon Kreis",
-			"email": "info@wildbunny.de",
-			"homepage": "https://www.wildbunny.de",
+			"email": "mail@netzhase.de",
+			"homepage": "https://www.netzhase.de",
 			"role": "Developer"
 		}
 	],
@@ -17,7 +17,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"WildBunny\\Framework\\CLI\\": "src"
+			"Netzhase\\Framework\\CLI\\": "src"
 		}
 	},
 	"keywords": [

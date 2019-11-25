@@ -1,15 +1,15 @@
 <?php
 /**
  * Copyright by Timon Kreis - All Rights Reserved
- * Visit https://www.wildbunny.de
+ * Visit https://www.netzhase.de
  */
 declare(strict_types = 1);
 
-namespace WildBunny\Framework\CLI;
+namespace Netzhase\Framework\CLI;
 
 /**
- * @author Timon Kreis <info@wildbunny.de>
- * @category WildBunny.Framework
+ * @author Timon Kreis <mail@netzhase.de>
+ * @category Netzhase.Framework
  * @package cli
  */
 class CLI
