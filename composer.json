@@ -1,13 +1,13 @@
 {
-	"name": "netzhase-framework/cli",
+	"name": "timonkreis-framework/cli",
 	"description": "Add classes for use in CLI.",
-	"homepage": "https://www.netzhase.de",
+	"homepage": "https://www.timonkreis.de",
 	"license": "proprietary",
 	"authors": [
 		{
 			"name": "Timon Kreis",
-			"email": "mail@netzhase.de",
-			"homepage": "https://www.netzhase.de",
+			"email": "mail@timonkreis.de",
+			"homepage": "https://www.timonkreis.de",
 			"role": "Developer"
 		}
 	],
@@ -17,7 +17,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Netzhase\\Framework\\CLI\\": "src"
+			"TimonKreis\\Framework\\CLI\\": "src"
 		}
 	},
 	"keywords": [

@@ -1,15 +1,15 @@
 <?php
 /**
  * Copyright by Timon Kreis - All Rights Reserved
- * Visit https://www.netzhase.de
+ * Visit https://www.timonkreis.de
  */
 declare(strict_types = 1);
 
-namespace Netzhase\Framework\CLI;
+namespace TimonKreis\Framework\CLI;
 
 /**
- * @author Timon Kreis <mail@netzhase.de>
- * @category Netzhase.Framework
+ * @author Timon Kreis <mail@timonkreis.de>
+ * @category TimonKreis.Framework
  * @package cli
  */
 class CLI
