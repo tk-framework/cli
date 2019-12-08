@@ -15,7 +15,7 @@ trim_trailing_whitespace = true
 
 ij_visual_guides = 120
 
-[*.{htm,html,phtml,xml,xsd}]
+[*.{htm,html,phtml,twig,xml,xsd}]
 ij_continuation_indent_size = 8
 
 [*.{yaml,yml}]
