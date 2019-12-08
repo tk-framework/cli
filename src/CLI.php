@@ -8,8 +8,7 @@ declare(strict_types = 1);
 namespace TimonKreis\Framework\CLI;
 
 /**
- * @author Timon Kreis <mail@timonkreis.de>
- * @category TimonKreis.Framework
+ * @category tk-framework
  * @package cli
  */
 class CLI
