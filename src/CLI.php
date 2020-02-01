@@ -196,14 +196,15 @@ class CLI
 	 *
 	 * @param string $message
 	 * @param bool $newLine
+	 * @param resource $stream
 	 * @return $this
 	 */
-	public function error(string $message = '', bool $newLine = true) : CLI
+	public function error(string $message = '', bool $newLine = true, $stream = STDERR) : CLI
 	{
-		fwrite(STDERR, $message);
+		fwrite($stream, $message);
 
 		if ($newLine) {
-			fwrite(STDERR, PHP_EOL);
+			fwrite($stream, PHP_EOL);
 		}
 
 		return $this;
