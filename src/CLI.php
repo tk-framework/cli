@@ -47,6 +47,11 @@ class CLI
 	protected $color = null;
 
 	/**
+	 * @var resource
+	 */
+	protected $stream = STDOUT;
+
+	/**
 	 * Get the current color
 	 *
 	 * @return int|null
@@ -60,10 +65,9 @@ class CLI
 	 * Set the color
 	 *
 	 * @param int|null $color
-	 * @param bool|resource $stream
 	 * @return $this
 	 */
-	public function setColor(int $color = null, $stream = STDOUT) : CLI
+	public function setColor(int $color = null) : CLI
 	{
 		if ($this->color !== $color) {
 			$this->color = $color;
@@ -101,7 +105,7 @@ class CLI
 			if ($color) {
 				foreach ($textColors as $index => $textColor) {
 					if ($color & $index) {
-						fwrite($stream, "\e[" . $textColor . 'm');
+						fwrite($this->stream, "\e[" . $textColor . 'm');
 
 						break;
 					}
@@ -109,16 +113,39 @@ class CLI
 
 				foreach ($bgColors as $index => $bgColor) {
 					if ($color & $index) {
-						fwrite($stream, "\e[" . $bgColor . 'm');
+						fwrite($this->stream, "\e[" . $bgColor . 'm');
 
 						break;
 					}
 				}
 			}
 			else {
-				fwrite($stream, "\e[0m");
+				fwrite($this->stream, "\e[0m");
 			}
 		}
+
+		return $this;
+	}
+
+	/**
+	 * Get the stream
+	 *
+	 * @return resource
+	 */
+	public function getStream()
+	{
+		return $this->stream;
+	}
+
+	/**
+	 * Set the stream
+	 *
+	 * @param resource $stream
+	 * @return $this
+	 */
+	public function setStream($stream) : CLI
+	{
+		$this->stream = $stream;
 
 		return $this;
 	}
@@ -130,7 +157,7 @@ class CLI
 	 */
 	public function clear() : CLI
 	{
-		fwrite(STDOUT, str_repeat(PHP_EOL, 100));
+		fwrite($this->stream, str_repeat(PHP_EOL, 100));
 
 		return $this;
 	}
@@ -151,14 +178,14 @@ class CLI
 			$this->setColor($color);
 		}
 
-		fwrite(STDOUT, $message);
+		fwrite($this->stream, $message);
 
 		if ($color) {
 			$this->setColor($prevColor);
 		}
 
 		if ($newLine) {
-			fwrite(STDOUT, PHP_EOL);
+			fwrite($this->stream, PHP_EOL);
 		}
 
 		return $this;
