@@ -1,0 +1,11 @@
+namespace: TimonKreis\Framework\Test
+paths:
+  tests: tests
+  output: tests/_output
+  data: tests/_data
+  support: vendor/tk-framework/test/src
+  envs: tests/_envs
+actor_suffix: Tester
+extensions:
+  enabled:
+  - Codeception\Extension\RunFailed

@@ -1,2 +1,10 @@
-/.idea
-/vendor
+.idea
+bower_components
+node_modules
+vendor
+
+/auth.json
+/bin
+/composer.lock
+/tests/_data
+/tests/_output

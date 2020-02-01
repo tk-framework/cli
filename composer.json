@@ -15,13 +15,27 @@
 		"php": ">=7.1",
 		"ext-readline": "*"
 	},
+	"require-dev": {
+		"tk-framework/test": "^1.0.0"
+	},
 	"autoload": {
 		"psr-4": {
 			"TimonKreis\\Framework\\CLI\\": "src"
 		}
 	},
+	"autoload-dev": {
+		"psr-4": {
+			"TimonKreis\\Framework\\CLI\\Tests\\": "tests/src"
+		}
+	},
 	"keywords": [
 		"cli",
 		"command line"
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://composer.timonkreis.de"
+		}
 	]
 }
