@@ -31,11 +31,5 @@
 	"keywords": [
 		"cli",
 		"command line"
-	],
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://composer.timonkreis.de"
-		}
 	]
 }
