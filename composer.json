@@ -2,7 +2,7 @@
 	"name": "tk-framework/cli",
 	"description": "Add classes for use in CLI.",
 	"homepage": "https://www.timonkreis.de",
-	"license": "proprietary",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Timon Kreis",
