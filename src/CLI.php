@@ -1,7 +1,8 @@
 <?php
 /**
- * Copyright by Timon Kreis - All Rights Reserved
- * Visit https://www.timonkreis.de
+ * @author Timon Kreis <mail@timonkreis.de>
+ * @copyright 2020 Timon Kreis
+ * @license http://www.opensource.org/licenses/mit-license.html
  */
 declare(strict_types = 1);
 
