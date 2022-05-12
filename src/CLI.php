@@ -225,18 +225,7 @@ class CLI
 			$this->echo($message, $newLine, $color);
 		}
 
-		if (PHP_OS == 'WINNT') {
-			$input = trim(stream_get_line(STDIN, 1024, PHP_EOL));
-		}
-		else {
-			$input = readline();
-
-			if ($input) {
-				readline_add_history($input);
-			}
-		}
-
-		return $input;
+		return  (string)@file_get_contents('php://input');
 	}
 
 	/**
