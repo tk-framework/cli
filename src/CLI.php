@@ -225,7 +225,20 @@ class CLI
 			$this->echo($message, $newLine, $color);
 		}
 
-		return  (string)@file_get_contents('php://input');
+		if (PHP_OS === 'WINNT') {
+			$input = trim(stream_get_line(STDIN, 1024, PHP_EOL));
+		}
+		elseif (extension_loaded('readline')) {
+			$input = readline();
+
+			if ($input) {
+				readline_add_history($input);
+			}
+		} else {
+			fscanf(STDIN, '%s', $input);
+		}
+
+		return $input;
 	}
 
 	/**

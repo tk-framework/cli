@@ -17,6 +17,9 @@
 	"require-dev": {
 		"tk-framework/test": "^1.0.0"
 	},
+	"suggest": {
+		"ext-readline": "*"
+	},
 	"autoload": {
 		"psr-4": {
 			"TimonKreis\\Framework\\CLI\\": "src"
